@@ -3,66 +3,163 @@
     padding:7px;
     box-sizing: border-box;
 }
+
 body{
-    font-family: 'poppins',sans-serif;
+    background-color:#ff009d;
+    font-family: 'Poppins', sans-serif;
 }
+
 .navbar{
     display:flex;
     align-items: center;
     padding: 20px;
 }
+
 nav{
     flex:6;
     text-align: right;
 }
+
 nav ul{
     display: inline-block;
     list-style-type: none;
 }
+
 nav ul li{
     display: inline-block;
     margin-right: 20px;
+   text-decoration: none;
 }
+
 a{
-    text-decoration: none;
+    text-decoration:none;
     color:black;
 }
+
 p{
-    color:red;
+    display:inline;
+    text-align:center;
+    color:rgb(231, 15, 51);
 }
+
 .container{
     max-width: 1400px;
     margin: auto;
     padding-left: 55px;
     padding-right: 55px;
 }
+
 .row{
     display: flex;
-    align-items: center;
+    align-items:center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .col-2{
-    flex-basis: 50px;
+    flex-basis: 50%;
     min-width: 400px;
 }
+
 .col-2 img{
     max-width: 100%;
-    padding: 60px;
+    padding: 40px;
 }
+
 .col-2 h1{
     font-size: 60px;
     line-height: 70px;
     margin: 50px 0;
 }
+
 .btn{
     display: inline-block;
-    background:blue;
-    color:red;
+    background: greenyellow;
+    color: black;
     padding: 8px 90px;
     margin: 50px 0;
     border-radius: 60px;
 }
+
+.btn:hover{
+    background-color:red;
+}
+
 .header{
-    background:radial-gradient(blue,white);
+    background: radial-gradient(white,blue);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    .col-2 h1 {
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .btn {
+        padding: 8px 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    nav {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .col-2 img {
+        max-width: 100%;
+    }
+
+    .col-2 h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .btn {
+        padding: 8px 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+    }
+
+    nav ul {
+        padding-left: 0;
+    }
+
+    nav ul li {
+        margin-right: 5px;
+        font-size: 14px;
+    }
+
+    .col-2 h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .btn {
+        padding: 8px 40px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
